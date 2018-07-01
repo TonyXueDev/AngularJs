@@ -1,3 +1,10 @@
+<!--<ul>
+  <li *ngFor = "let name of names">Hello {{ name }}</li> // 1.5 不使用组件将数组的值渲染到页面
+</ul>-->
 <ul>
-  <li *ngFor = "let name of names">Hello {{ name }}</li>
+  <app-user-item
+    *ngFor ="let individualName of names" [name] = "individualName"> // 这里做此修改是为了解决将数组的值传递到页面模板
+  </app-user-item>
 </ul>
+
+
